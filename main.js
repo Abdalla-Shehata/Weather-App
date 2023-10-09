@@ -1,7 +1,7 @@
 //API FROM       https://www.weatherapi.com/
 var weatherData = [];
 async function weather(city) {
-    var apiResult = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=7d77b96c972b4d119a3151101212704&q=${city}&days=3`);
+    var apiResult = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=7d77b96c972b4d119a3151101212704&q=${city}&days=3`);
     var finalResponse = await apiResult.json();
     weatherData = finalResponse;
     display();
@@ -47,7 +47,7 @@ function display() {
             <div><span>${weatherData.location.name}</span></div>
             <div class="current_degree">
                 <h2 class='fs-1 m-0'>${weatherData.current.temp_c}<sup>o</sup>C</h2>
-                <div><img src="http:${weatherData.current.condition.icon}" alt=""></div>
+                <div><img src="https:${weatherData.current.condition.icon}" alt=""></div>
             </div>
             <div class="mb-1">${weatherData.current.condition.text}</div>
             <div>
@@ -61,7 +61,7 @@ function display() {
     <div class="col">
         <div class="items text-center shadow p-2 my-2">
             <div><span>${dayName(weatherData.forecast.forecastday[1].date)}</span></div>
-            <div><img src="http:${weatherData.forecast.forecastday[1].day.condition.icon}" alt=""></div>
+            <div><img src="https:${weatherData.forecast.forecastday[1].day.condition.icon}" alt=""></div>
             <div>
                 <p class="fs-4 mb-0">${weatherData.forecast.forecastday[1].day.maxtemp_c}<sup>o</sup>C</p>
                 <span class="d-block mb-2">${weatherData.forecast.forecastday[1].day.mintemp_c}<sup>o</sup>C</span>
@@ -72,7 +72,7 @@ function display() {
     <div class="col">
         <div class="items text-center shadow p-2 my-2">
             <div><span>${dayName(weatherData.forecast.forecastday[2].date)}</span></div>
-            <div><img src="http:${weatherData.forecast.forecastday[2].day.condition.icon}" alt=""></div>
+            <div><img src="https:${weatherData.forecast.forecastday[2].day.condition.icon}" alt=""></div>
             <div>
                 <p class="fs-4 mb-0">${weatherData.forecast.forecastday[2].day.maxtemp_c}<sup>o</sup>C</p>
                 <span class="d-block mb-2">${weatherData.forecast.forecastday[2].day.mintemp_c}<sup>o</sup>C</span>
