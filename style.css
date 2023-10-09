@@ -1,6 +1,11 @@
+body {
+    font-family: 'Gabarito', cursive;
+}
+
 .navbar-brand .site-description {
     font-size: 0.7rem;
 }
+
 .navbar-brand .site-title {
     line-height: 0px;
 }
@@ -12,6 +17,7 @@
     background-attachment: scroll;
     height: 100vh;
 }
+
 .landing::before {
     content: "";
     position: absolute;
@@ -20,24 +26,26 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
 }
+
 .landing form input#search {
     display: inline-block !important;
     width: 75% !important;
     color: #fff !important;
-    background-color: #0000002e!important;
+    background-color: #00000042 !important;
     font-weight: 500 !important;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     border: 1px solid #ced4da1a !important;
 }
+.landing form input#search::placeholder{
+    color: black;
+}
+
 .landing form input#search:focus {
-    color: #fff !important;
     border-color: #86b7fe4f !important;
 }
-input[placeholder] {
-    color: aqua !important;
-}
+
 .items {
-    background-color: #00000059;
+    background-color: #0000008a;
     border-radius: 5px;
     color: white;
 }
